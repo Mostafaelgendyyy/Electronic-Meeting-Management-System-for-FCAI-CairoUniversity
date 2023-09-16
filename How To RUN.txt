@@ -1,0 +1,27 @@
+for Runnig Project You should :
+
+1- Install PHP V7 
+
+2- when Migrating Database you should use this Queries Sequentially
+
+   php artisan migrate --path=/database/migrations/2023_07_06_041017_create_adminstrations_table.php
+
+   php artisan migrate --path=/database/migrations/2023_07_12_184118_create_meetingtypes_table.php
+
+   php artisan migrate --path=/database/migrations/2023_07_12_183936_create_subjecttypes_table.php
+
+   php artisan migrate --path=/database/migrations/2023_07_06_043622_create_places_table.php
+
+   php artisan migrate
+
+3- You should download this extension from chrome 'cors unblock' 
+   through this link 
+   https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino
+
+   Note: please Make sure that cors unblock is running from extention icon
+
+4- Only one email was created automatically for admin 
+   email: admin@gmail.com
+   password: password
+
+5- you should add Departments, subjecttypes and meeting types first through Admin Email.
