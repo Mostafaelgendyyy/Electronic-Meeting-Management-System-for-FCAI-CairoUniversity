@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--My Custom CSS Files-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/addmeetingtype.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <!-- <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <title>اضافة مكان</title>
+    <script>
+        window.onload = function () {
+            getsubjectstype();
+        };
+    </script>
+</head>
+
+<body>
+
+    <!--First Section Header Start-->
+    <section class="firstheader">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href="#"><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60"
+                        alt=""></a>
+                <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+            </div>
+            <ul class="icons fade-in">
+                <a  id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+            </ul>
+        </div>
+        <br>
+    </section>
+    <!--First Section Header End-->
+    <!--Navbar Start-->
+    <div class="NavBar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" href="admin.html">اضافة مستخدم</a>
+                        <a class="nav-link" href="adddepartment.html">اضافة قسم</a>
+                        <a class="nav-link" href="adminaddinvitees.html">اضافة اعضاء </a>
+                        <a class="nav-link" href="adminaddlocation.html">اضافة مكان</a>
+                        <a class="nav-link" href="addmeetingtype.html">اضافة نوع اجتماع</a>
+                        <a class="nav-link" href="addsubject.html">اضافة نوع الموضوع</a>
+                        <a class="nav-link" href="initiatorgroups.html">اضافة مجموعه</a>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </div>
+    <!--Navbar End-->
+
+    <!--Create Sub Start-->
+    <br>
+    <div class="container">
+        <div class="createSub">
+            <form id="admin-form" action="">
+                
+                <div>
+                    <br>
+                    <h4>إضافه نوع الموضوع</h4>
+                    <br>
+                    <input class="form-control inputform" type="text" placeholder="نوع الموضوع" aria-label="default input example" id="textinput">
+                    <button onclick="addsubjecttype()" type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#exampleModal22">
+                        إضافه
+                    </button>
+
+                    <!---->
+                    <br>
+                    <h4 class="h4-2">حذف نوع الوضوع</h4>
+                    <br>
+                    <div class="card-body">
+                        <form action="/action_page.php" class="" id="">
+                            <select onclick="fun()" class="input4" name="type" id="sub">
+                                <option value="sub1"> </option>
+                            </select>
+                        </form>
+                    </div>
+                    <button type="click" id="butt" class="button33" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                        حذف نوع الموضوع
+                    </button>
+
+                </div>
+
+                
+
+            </form>
+        </div>
+    </div>
+    <br>
+
+    <!--Footer Copyright Start-->
+    <div class="lastsection">
+        <center>
+            <div class="textlastsection">
+                <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+        </center>
+    </div>
+    <!--Footer Copyright End-->
+
+    <!--JS Files-->
+    <script src="js/logout.js"></script>
+    <script src="js/addsubject.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/flipcard.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/authenticatedAdmin.js"></script>
+
+</body>
+
+</html>

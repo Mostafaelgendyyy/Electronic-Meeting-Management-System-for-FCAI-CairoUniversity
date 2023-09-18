@@ -1,0 +1,132 @@
+.right{
+    box-sizing: border-box !important;
+    height: 90vh;
+}
+
+.right1{
+    position: relative;
+    margin-right: 9.8% !important;
+    background-color: rgb(32, 71, 118);
+    width: 130%;
+    height: 100%;
+    margin: 0.7%;
+    border-radius: 17px;
+}
+
+.dropd{
+    position: absolute;
+    right: 3%;
+    border: 0%;
+    border-radius: 7px;
+    width: 30% !important;
+    height: 5%;
+}
+
+.selectdonebtn1{
+    position: absolute !important;
+    right: 3% !important;
+    bottom: 14%;
+    width: fit-content ;
+    background-color: rgb(18, 29, 43) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+
+.selectdonebtn1:hover{
+    background-color: rgb(163, 195, 237) !important;
+    color: black !important;
+}
+
+.button12{
+    position: absolute ;
+    bottom: 5%;
+    right: 3% !important;
+    width: 25% !important;
+    height: fit-content !important;
+}
+
+.formayainshallah{
+    position: absolute;
+    position: relative;
+    border: 0px;
+    border-radius: 8px; 
+    height: 50vh !important;
+    max-height: 50vh;
+    width: 198%;
+    right: 3%;
+    bottom: 2%;
+    margin-top: 8%;
+    overflow: auto;
+    background-color: white;
+}
+
+.chbox{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: scale(2);
+}
+
+.h3-1{
+    position: absolute;
+    top: 4%;
+    right: 2.5%;
+    color: rgb(0, 0, 0);
+}
+
+.selectdonebtn{
+    position: absolute !important;
+    bottom: 5% !important;
+    left: 5% !important;
+    width: 12% ;
+    height: fit-content;
+    background-color: rgb(68, 138, 185) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+
+.selectdonebtn:hover{
+    background-color: rgb(32, 82, 114) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.h2-5{
+    color:rgba(255, 255, 255, 0.89);
+    font-size: 180%;
+    margin-right: 2%;
+    text-align: right;
+}
+
+.h4-1{
+    color:rgba(255, 255, 255, 0.89);
+    font-size: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: 3% !important;
+    text-align: right;
+}
+
+.inputStyling{
+    border-radius: 5px;
+    margin-right: 3%;
+    width: 65%;
+    height: 35px !important; 
+}
+
+.forsizes{
+    position: relative;
+}
+
+.selectdonebtn2{
+    position: absolute;
+    top: 24%;
+    left: 4%;
+    width: fit-content ;
+    height: 35px !important;  
+    background-color: rgb(18, 29, 43) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+
+
+
+
+  
+  

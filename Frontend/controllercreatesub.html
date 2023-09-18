@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--My Custom CSS Files-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/CreateSubject.css">
+  <!--Bootstrap 5-->
+  <link href="css\bootstrap.min.css" rel="stylesheet">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+  <title>إنشاء الموضوع</title>
+  <script>
+    window.onload = function () {
+      displaySubjetsType();
+    };
+  </script>
+</head>
+
+<body>
+
+  <!--First Section Header Start-->
+  <section class="firstheader">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href="#"><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60" alt=""></a>
+        <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+      </div>
+      <ul class="icons fade-in">
+        <a class="icon" href="controllerhome.html"><i class="fa-solid fa-house"></i></a>
+        <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a>
+        <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+      </ul>
+    </div>
+    <br>
+  </section>
+  <!--First Section Header End-->
+  <!--Navbar Start-->
+  <div class="NavBar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link active" aria-current="page" href="controllerhome.html">الرئيسية</a>
+            <a class="nav-link" href="controller-redirectsubject.html">إعادة توجيه الموضوعات</a>
+            <a class="nav-link" href="controllercreatesub.html">إنشاء مواضيع</a>
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <!--Navbar End-->
+
+  <!--Create Sub Start-->
+  <div class="container">
+    <div class="createSub">
+      <form id="createsubjectform" action="">
+        <br>
+        <h3>إنشاء موضوع</h3>
+        <br>
+        <form action="/action_page.php">
+          <select class="subdropdown" id="subjecttype">
+            <option value="sub1"> 1</option>
+          </select>
+        </form>
+        <br>
+        <br>
+        <!-- <form action="/action_page.php">
+          <label style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; font-size: large;"> اضافه مرفقات</label>
+          <br>
+          <input type='file' id="myFile1"  name='files[]' multiple>
+        </form>
+        <br> -->
+        <!-- <form action="/action_page.php">
+          <label style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; font-size: large;"> رفع مواضيع </label>
+          <br>
+          <input type="file" id="myFile2" name="filename2">
+        </form>
+        <br> -->
+        <textarea id="description" class="inputStylingArea" id="" placeholder="اكتب هنا...."></textarea>
+        <button type="submit" onclick="send()" class="SendBtn">إرسال</button>
+    </form>
+    </div>
+  </div>
+  <!--Create Sub End-->
+
+  <!--Footer Copyright Start-->
+  <div class="lastsection">
+    <center>
+      <div class="textlastsection">
+        <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+      </div>
+    </center>
+  </div>
+  <!--Footer Copyright End-->
+
+  <!--JS Files-->
+  <script src="js/controllercreatesub.js"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/flipcard.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/authenticatedController.js"></script>
+
+</body>
+
+</html>

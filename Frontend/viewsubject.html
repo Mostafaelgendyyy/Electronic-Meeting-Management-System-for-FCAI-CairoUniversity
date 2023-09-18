@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--My Custom CSS Files-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/viewsubject.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <title>موضوع</title>
+    <script>
+        window.onload = function () {
+            getsubjectdata();
+        };
+    </script>
+</head>
+
+<body>
+
+    <!--First Section Header Start-->
+    <section class="firstheader">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href="logged_index.html"><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60"
+                        width="60" alt=""></a>
+                <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+            </div>
+            <ul class="icons fade-in">
+                <a class="icon" href="logged_index.html"><i class="fa-solid fa-house"></i></a>
+                <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a>
+                <a class="icon" href="archive.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+            </ul>
+        </div>
+        <br>
+    </section>
+    <!--First Section Header End-->
+    <!--Navbar Start-->
+    <div class="NavBar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" href="createmeeting.html">الاجتماعات</a>
+                        <a class="nav-link" href="initiatornotification.html">الإشعارات</a>
+                        <a class="nav-link" href="archive.html">أرشيف</a>
+                        <a class="nav-link" href="CreateSubject.html">إنشاء مواضيع</a>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </div>
+    <!--Navbar End-->
+    <!--Create Sub Start-->
+    <div>
+        <div class="container" id="viw">
+            <div class="row">
+                <div class="col-md-8">
+                    <br>
+                    <label style="font-size: x-large;">نوع الموضوع :</label>
+                    <br>
+                    <label style="font-size: x-large;">اجتماع :</label>
+                    <br>
+                    <label style="font-size: x-large;">التاريخ :</label>
+                    <br>
+                    <br>
+                    <div class="col-5">
+                        <div>
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            المرفقات
+                          </button>
+          
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">المرفقات </h1>
+                                </div>
+          
+                                <div class="modal-body">
+                                  <div class="container ">
+          
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <div class="card border-0 h-100">
+                                          <div class="card-body">
+                                            <a class="btn btn-transparent" href="#" 
+                                              style="background-color: transparent; border: 0px;"><img src="img/file.png"
+                                                height="50" width="50" alt=""></a> <!--fl href ektby esm el page.html bt3t el pdf-->
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="card border-0 h-100">
+                                          <div class="card-body">
+                                            <p class="card-text" style="text-align:left;">abcdefg<p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                    <hr>
+          
+                                  </div>
+                                </div>
+          
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+          
+                        </div>
+                      </div>
+                    <br>
+                    <textarea name="Decision" placeholder="قرار" id="" cols="100" rows="5" disabled></textarea>
+                    <br>
+                    <br>
+                    <textarea name="Subject" placeholder="موضوع" id="" cols="150" rows="9" disabled></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a class="btn mt-4 px-5 py-2  selectAttBtn" href="archive.html"> رجوع </a>
+        </div>
+    </div>
+    <!--Create Sub End-->
+    <br>
+    <!--Footer Copyright Start-->
+    <div class="lastsection">
+        <center>
+            <div class="textlastsection">
+                <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+        </center>
+    </div>
+    <!--Footer Copyright End-->
+
+    <!--JS Files-->
+    <script src="js/logout.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/viewsubject.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/flipcard.js"></script>
+    <script src="js/authenticatedInitiator.js"></script>
+
+</body>
+
+</html>

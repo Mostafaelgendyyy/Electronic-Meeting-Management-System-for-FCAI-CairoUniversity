@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--My Custom CSS Files-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/adminaddinvitees.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <!-- <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <title>اضافة اعضاء</title>
+    <script>
+        window.onload = function () {
+            showinvited();
+        };
+    </script>
+</head>
+
+<body>
+
+    <!--First Section Header Start-->
+    <section class="firstheader">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href="#"><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60"
+                        alt=""></a>
+                <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+            </div>
+            <ul class="icons fade-in">
+                <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+            </ul>
+        </div>
+        <br>
+    </section>
+    <!--First Section Header End-->
+    <!--Navbar Start-->
+    <div class="NavBar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" href="admin.html">اضافة مستخدم</a>
+                        <a class="nav-link" href="adddepartment.html">اضافة قسم</a>
+                        <a class="nav-link" href="adminaddinvitees.html">اضافة اعضاء </a>
+                        <a class="nav-link" href="adminaddlocation.html">اضافة مكان</a>
+                        <a class="nav-link" href="addmeetingtype.html">اضافة نوع اجتماع</a>
+                        <a class="nav-link" href="addsubject.html">اضافة نوع الموضوع</a>
+                        <a class="nav-link" href="initiatorgroups.html">اضافة مجموعه</a>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </div>
+    <!--Navbar End-->
+
+    <!--Create Sub Start-->
+    <br>
+    <div class="container">
+        <div class="createSub">
+            <form id="admin-form" action="">
+                <br>
+                <h3>اضافة اعضاء</h3>
+                <br>
+                <input id="name" type="text" class="inputStyling" placeholder="اسم المستخدم" autocomplete="off">
+                <br>
+                <br>
+                <input id="description" type="text" class="inputStyling" placeholder="المسمى الوظيفى"
+                    autocomplete="off">
+                <br>
+                <br>
+                <input id="email" type="email" class="inputStyling" placeholder="بريد الألكتروني" autocomplete="off">
+                <br>
+                <br>
+                <button type="submit" onclick="add()" class="SendBtn">أضف</button>
+            </form>
+            <div class="col-5">
+                <div>
+                    <button type="button" class="button11" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                        قائمه الاعضاء
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">قائمه الاعضاء
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        style="margin-left: 0;"></button>
+                                </div>
+                                <!---------------------------------------->
+                                <div class="modal-body">
+                                    <div id="listofusers">
+                                        <div id="getusers" class="row box">
+                                            <div class="col-md-3">
+                                                <div class="card border-0 h-100">
+                                                    <div class="card-body">
+                                                        <a class="btn btn-transparent" id="update"
+                                                            style="background-color: transparent; border: 0px;"><img
+                                                                src="logos/avatar.png" height="60" width="60"
+                                                                alt=""></a>
+
+                                                        <div class="card-body">
+                                                            <button id="nfc" class="btn btn-primary"
+                                                                onclick="deletFunction('')"
+                                                                style="text-decoration: underline; height: 15;">حذف</button>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!---------------------------------------->
+                                            <div class="col-md-6">
+                                                <div class="card border-0 h-100">
+                                                    <div id="datashown" class="card-body">
+                                                        <p id="showname" class="card-text" style="text-align:right;">
+                                                        </p>
+                                                        <p id="showname" class="card-text" style="text-align:right;">
+                                                        <p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="dataContainer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">إغلاق</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--Footer Copyright Start-->
+    <div class="lastsection">
+        <center>
+            <div class="textlastsection">
+                <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+        </center>
+    </div>
+    <!--Footer Copyright End-->
+
+    <!--JS Files-->
+    <script src="js/adminaddinvitees.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flipcard.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/authenticatedAdmin.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--My Custom CSS Files-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/currentmeetingbutton.css">
+  <!--Bootstrap 5-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+  <title>الاجتماع</title>
+  <script>
+    window.onload = function () {
+      getdoctors();
+      getsubjects();
+    };
+  </script>
+</head>
+
+<body>
+  <!--First Section Header Start-->
+  <section class="firstheader">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href=""><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60" alt=""></a>
+        <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+      </div>
+      <ul class="icons fade-in">
+        <a class="icon" href="createmeeting.html"><i class="fa-solid fa-house"></i></a>
+        <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a>
+        <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+      </ul>
+    </div>
+    <br>
+  </section>
+  <!--First Section Header End-->
+  <!--Navbar Start-->
+  <div class="NavBar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link" href="createmeeting.html">الاجتماعات</a>
+            <a class="nav-link" href="initiatornotification.html">الإشعارات</a>
+            <a class="nav-link" href="archive.html">أرشيف</a>
+            <a class="nav-link" href="CreateSubject.html">إنشاء مواضيع</a>
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <!--Navbar End-->
+
+  <!--Create Sub Start-->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <br>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators" id="slbutton">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            </div>
+
+
+            <div class="carousel-inner" id="subjects">
+              <div class="carousel-item active">
+                <textarea name="Subject" id="" cols="100" rows="10" disabled
+                  style="text-align: center; font-size:large ; padding-top: 30%;">اضغط على السهم لبدء عرض المواضيع</textarea>
+              </div>
+
+              <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+            </div>
+            <br>
+            <div>
+              <button class="btn mt-4 px-5 py-2  selectAttBtn" onclick="endmeeting()" type="submit"> انهاء
+                الاجتماع</button>
+              <!-- <a class="btn mt-4 px-5 py-2  selectAttBtn" onclick="endmeeting()" href="createmeeting.html"> انهاء الاجتماع </a> -->
+            </div>
+
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" style="background-color: black;padding: 20px;border-radius: 6px;"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button> -->
+
+            <button class="carousel-control-next" style="right: -100px;" type="button"
+              data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon"
+                style="background-color: black;padding: 20px; border-radius: 6px;" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+          </div>
+
+
+
+        </div>
+
+        <div class="col-md-4 mt-5">
+          <div style="border: 2px solid black; height: 500px; overflow: auto;"><br>
+            <div class="container">
+              <h3>حضور</h3>
+              <div id="doctors">
+                <div class="row formayainshallah" hidden>
+                  <div class="col-md-3">
+                    <div class="card border-0 h-100">
+                      <div class="card-body">
+                        <img src="logos/avatar.png" height="70" width="70" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card border-0 h-0">
+                      <div class="card-body">
+                        <p class="card-text" style="text-align:right;">القسم: نظم معلومات<br>الاسم: حسام الدين حسن حامد
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="card border-0 h-100">
+                      <div class="card-body">
+                        <input class="chbox" type="checkbox" id="Doc1" name="Doc1" value="Doc1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <a id="pdf" class="prevmeetingbtn">محضر الاجتماع السابق</a>
+        </div>
+
+      </div>
+      <!--Create Sub End-->
+
+        <!--Footer Copyright Start-->
+        <div class="lastsection1">
+          <center>
+            <div class="textlastsection">
+              <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+          </center>
+        </div>
+        <!--Footer Copyright End-->
+
+        <!--JS Files-->
+        <script src="js/currentmeetingbutton.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/animation.js"></script>
+        <script src="js/flipcard.js"></script>
+        <script src="js/logout.js"></script>
+        <script src="js/authenticatedInitiator.js"></script>
+</body>
+
+</html>

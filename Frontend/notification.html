@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--My Custom CSS Files-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/notification.css">
+  <!--Bootstrap 5-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+  <script>
+    window.onload = function () {
+      upcommingmeeting();
+      getnotifications();
+    };
+  </script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+  <title>الإشعارات</title>
+</head>
+
+<body>
+
+  <!--First Section Header Start-->
+  <section class="firstheader">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href=""><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60" alt=""></a>
+        <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+      </div>
+      <ul class="icons fade-in">
+        <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a>
+        <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+      </ul>
+    </div>
+    <br>
+  </section>
+  <!--First Section Header End-->
+  <!--Navbar Start-->
+  <div class="NavBar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link active" aria-current="page" href="notification.html">الإشعارات</a>
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <!--Navbar End-->
+
+  <section class="firstheader">
+    <div class="container-fluid text-center meetingDetails">
+
+      <div class="row">
+        <div class="col-4 left">
+          <div class="col-10 left1" id="upcomming">
+            <div class="left1Layer1">
+              <label class="h2-1">
+                الاجتماعات القادمة
+              </label>
+              <label class="h3-1">
+                نوع الاجتماع:
+              </label>
+              <label class="h3-2">
+                المكان:
+              </label>
+              <label class="h3-3">
+                التاريخ:
+              </label>
+              <label class="h3-4">
+                الساعه:
+              </label>
+            </div>
+          </div>
+
+          <div class="col-10 left2">
+            <div class="left2Layer2">
+
+              
+
+              <div class="row row2">
+                <h2 class="h2-3">
+                  محضر الاجتماع السابق<span class="space2"></span> <a class="btn btn-light button2"
+                    href="pdfpage_doctor.html" role="button" target="_blank"> عرض </a>
+                </h2>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-8 right">
+          <div class="right1 " style="position: relative;">
+            <div class="container parent ">
+
+              <h2 class="h2-5">الإشعارات</h2>
+
+              <div class="card bg-transparent parent border-0">
+                <!--Row1-->
+                <div class="row row-cols-1 row-cols-md-1 g-2 notification" id="notificationtable">
+
+                  <div class="card cardu">
+                    <div class="card-body" class="forPlaces">
+                      <blockquote class="blockquote mb-0" hidden style="font-family: 'Amiri', serif;">
+                        <p class="sizecontroller">يدعوكم دكتور/ ${notification.initiator.name} لحضور اجتماع
+                          ${notification.meeing.meetingtype}
+                          ,وذلك في تمام الساعه/ ${notification.meeing.startedtime} ,الموافق/ ${notification.meeing.date}
+                          ,في/ ${notification.meeing.location} </p>
+                      </blockquote>
+
+                      <hr>
+
+                      <div class="col-5">
+                        <div>
+                          <button type="button" class="agenda" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                            محضر الاجتماع
+                          </button>
+
+                          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                              <div class="modal-content">
+                                <div id="list">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">الموضوع</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                      style="margin-left: 0;"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="container" id="">
+                                      <p class="card-text" style="text-align:right;">نوع الموضوع: </p>
+                                      <textarea placeholder="الموضوع" cols="57" rows="7" disabled>  </textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="submit" onclick="acceptRequest('' , '')" class="accept">
+                            الموافقه
+                          </button>
+
+                          <button type="submit" onclick="rejectRequest('','')" class="reject">
+                            الاعتذار عن الحضور
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <br>
+
+  <!--Footer Copyright Start-->
+  <div class="lastsection">
+    <center>
+      <div class="textlastsection">
+        <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+      </div>
+    </center>
+  </div>
+  <!--Footer Copyright End-->
+
+  <!--JS Files-->
+  <script src="js/logout.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/flipcard.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/authenticatedDoctor.js"></script>
+
+</body>
+
+</html>

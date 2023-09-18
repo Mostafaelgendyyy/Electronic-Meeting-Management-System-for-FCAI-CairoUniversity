@@ -1,0 +1,121 @@
+.cardArc{
+    background-color: rgba(0, 81, 162, 0.799) !important;
+    color:rgb(255, 255, 255) !important;
+    position: relative !important;
+}
+.viewbtn{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgba(12, 20, 77, 0.895) !important;
+    width: 8.5% !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 1.5% !important;
+}
+.classSub{
+    font-size: 200%;
+    color: rgb(255, 255, 255) !important;
+}
+.classMeet{
+    font-size: 160%;
+    color: rgb(255, 255, 255);
+}
+.classDate{
+    font-size: 155%;
+    color: rgb(20, 32, 57);
+}
+.lastsection {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 1% ;
+  }
+  .btnSearchbar{
+    border: 1px solid rgb(12, 20, 77) !important;
+    background-color: white !important;
+    transition: all linear 250ms;
+  }
+  .btnSearchbar:hover{
+    border: 1px solid rgb(12, 20, 77) !important;
+    background-color: rgb(12, 20, 77) !important;
+    color: white !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Mobile devices */
+    .NavBar {
+      padding: 0;
+    }
+    .navbar {
+      flex-direction: column;
+    }
+    .nav-link {
+      padding: 10px;
+    }
+    .cardArc .viewbtn {
+      width: 20%;
+    }
+    .classSub {
+      font-size: 150%;
+    }
+    .classMeet {
+      font-size: 120%;
+    }
+    .classDate {
+      font-size: 110%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets */
+    .NavBar {
+      padding: 0;
+    }
+    .navbar {
+      flex-direction: column;
+    }
+    .nav-link {
+      padding: 10px;
+    }
+    .cardArc .viewbtn {
+      width: 15%;
+    }
+    .classSub {
+      font-size: 170%;
+    }
+    .classMeet {
+      font-size: 140%;
+    }
+    .classDate {
+      font-size: 130%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    /* TV */
+    .NavBar {
+      padding: 0 5%;
+    }
+    .navbar {
+      flex-direction: row;
+    }
+    .nav-link {
+      padding: 20px;
+      font-size: 120%;
+    }
+    .cardArc .viewbtn {
+      width: 8.5%;
+    }
+    .classSub {
+      font-size: 200%;
+    }
+    .classMeet {
+      font-size: 160%;
+    }
+    .classDate {
+      font-size: 155%;
+    }
+  }
+  

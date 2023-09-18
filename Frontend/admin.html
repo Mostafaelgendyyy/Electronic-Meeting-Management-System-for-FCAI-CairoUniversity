@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--My Custom CSS Files-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <!-- <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <title>اضافة مستخدم</title>
+    <script>
+        window.onload = function () {
+            departments();
+        };
+    </script>
+</head>
+
+<body>
+
+    <!--First Section Header Start-->
+    <section class="firstheader">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href="#"><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60"
+                        alt=""></a>
+                <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+            </div>
+            <ul class="icons fade-in">
+                <a  id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+            </ul>
+        </div>
+        <br>
+    </section>
+    <!--First Section Header End-->
+    <!--Navbar Start-->
+    <div class="NavBar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" href="admin.html">اضافة مستخدم</a>
+                        <a class="nav-link" href="adddepartment.html">اضافة قسم</a>
+                        <a class="nav-link" href="adminaddinvitees.html">اضافة اعضاء </a>
+                        <a class="nav-link" href="adminaddlocation.html">اضافة مكان</a>
+                        <a class="nav-link" href="addmeetingtype.html">اضافة نوع اجتماع</a>
+                        <a class="nav-link" href="addsubject.html">اضافة نوع الموضوع</a>
+                        <a class="nav-link" href="initiatorgroups.html">اضافة مجموعه</a>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </div>
+    <!--Navbar End-->
+
+    <!--Create Sub Start-->
+    <div class="container">
+        <div class="createSub">
+            <form id="admin-form" action="">
+                <br>
+                <h3>إنشاء حساب</h3>
+                <br>
+                <input id="name" type="text" class="inputStyling" placeholder="اسم المستخدم" autocomplete="off">
+                <br>
+                <br>
+                <input id="password" type="password" class="inputStyling" placeholder="كلمة المرور" autocomplete="off">
+                <br>
+                <br>
+                <input id="email" type="email" class="inputStyling" placeholder="بريد الألكتروني" autocomplete="off">
+                <br>
+                <br>
+
+                <div class="container">
+                    <h5>نوع الحساب</h5>
+                    <input class="form-check-input" type="radio" value="منشئ الاجتماع" name="search-radio" id="user1">
+                    <label class="form-check-label" for="user1"  value = وكيل>وكيل</label>
+                    <br>
+                    <input class="form-check-input" type="radio" value="منشئ الاجتماع" name="search-radio" id="user2">
+                    <label class="form-check-label" for="user2" value="عميد">عميد</label>
+                    <br>
+                    <input class="form-check-input" type="radio" value="منشئ الاجتماع" name="search-radio" id="user3">
+                    <label class="form-check-label" for="user3" value="رئيس قسم">رئيس قسم</label>
+                    <br>
+                    <input class="form-check-input" type="radio" value="سكرتير" name="search-radio" id="user4">
+                    <label class="form-check-label" for="user4" value="سكرتير">سكرتير</label>
+                    <br>
+                    <input class="form-check-input" type="radio" value="عضو هيئة تدريس" name="search-radio" id="user5">
+                    <label class="form-check-label" for="user5" value="عضو هيئة تدريس">عضو هيئة تدريس</label>
+                    <br>
+                    <input class="form-check-input" type="radio" value="مسؤل النظام"  name="search-radio" id="user6">
+                    <label class="form-check-label" for="user6" value="مسؤل النظام">مسؤل النظام</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="container">
+                    <h5>القسم</h5>
+                    <div  id="department">
+                    <input class="form-check-input" hidden type="radio" value="2" name="search-radio1"
+                        id="department1">
+                    <label class="form-check-label"  for="department1">
+                        من فضلك ادخل الاقسام من صفحة اضافة قسم
+                    </label>
+                    <br>
+                    </div>
+                    
+                </div>
+                
+                <div>
+                    <button type="submit" class="SendBtn">أضف</button>
+                </div>
+                <div class="col-5">
+                    <div>
+                        <button type="button" class="button11" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                            قائمه المستخدمين
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">قائمه المستخدمين
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close" style="margin-left: 0;"></button>
+                                    </div>
+                                    <!---------------------------------------->
+                                    <div class="modal-body">
+
+                                        <form>
+                                            <select onchange="fun()" id="users" class="selectuser">
+                                                <option hidden>نوع المستخدم</option>
+                                                <option value="منشئ الاجتماع">عميد/وكيل/رئيس قسم</option>
+                                                <option value="سكرتير">سكرتير</option>
+                                                <option value="عضو هيئة تدريس">عضو هيئة تدريس</option>
+                                                <option value="مسؤل النظام">مسؤل النظام</option>
+                                            </select>
+                                        </form>
+                                        <div id="listofusers" class="container">
+                                            <div id="getusers" class="row box" hidden>
+                                                <div class="col-md-3">
+                                                    <div class="card border-0 h-100">
+                                                        <div class="card-body">
+                                                            <a class="btn btn-transparent" id="update" onclick="updateUser('')" href="edituser.html"
+                                                                style="background-color: transparent; border: 0px;"><img
+                                                                    src="logos/avatar.png" height="60" width="60"
+                                                                    alt=""><span
+                                                                    style="text-decoration: underline;">تعديل</span></a>
+
+                                                            <div class="card-body">
+                                                                <button id="butt" class="btn btn-primary"
+                                                                    onclick="mySpecificFunction('')"
+                                                                    style="text-decoration: underline; height: 15;">حذف</button>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!---------------------------------------->
+                                                <div class="col-md-6">
+                                                    <div class="card border-0 h-100">
+                                                        <div id="datashown" class="card-body">
+                                                            <p id="showname" class="card-text"
+                                                                style="text-align:right;">الاسم: </p>
+                                                            <p id="showdept" class="card-text"
+                                                                style="text-align:right;">القسم: </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="dataContainer"></div>
+
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"
+                                            data-bs-dismiss="modal">إغلاق</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <br>
+
+    <!--Footer Copyright Start-->
+    <div class="lastsection">
+        <center>
+            <div class="textlastsection">
+                <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+        </center>
+    </div>
+    <!--Footer Copyright End-->
+
+    <!--JS Files-->
+    <script src="js/admin.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/flipcard.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/authenticatedAdmin.js"></script>
+
+</body>
+
+</html>

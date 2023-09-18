@@ -1,0 +1,23 @@
+.openningsectionContactUs{
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63) , rgba(0, 0, 0, 0.76)),url(../img/contact.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mails{
+    color: white;
+}
+.mailname{
+    color: rgb(199, 216, 255);
+}
+.linkscontact{
+    color: white;
+}
+.linkscontact:hover{
+    text-decoration: none;
+}

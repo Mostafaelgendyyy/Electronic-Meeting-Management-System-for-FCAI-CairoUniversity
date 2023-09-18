@@ -1,0 +1,89 @@
+.right{
+    position: relative;
+    box-sizing: border-box !important;
+    height: 80vh;
+}
+
+.right1{
+    position: absolute;
+    margin-right: 13% !important;
+    background-color: rgb(32, 71, 118);
+    width: 120%;
+    height: 100%;
+    margin: 0.7%;
+    border-radius: 17px;
+}
+
+.cardu{
+    height: 28% !important;
+}
+.h2-5{
+    color:white;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.notification{
+    height: 450px; 
+    border: 0px; 
+    background-color: transparent !important;
+    border-radius: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+blockquote
+{
+    text-align-last: start;
+    height: 20vh;
+    width: 100%;
+}
+.forPlaces{
+    position: relative;
+}
+
+.agenda {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    right: 3%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(72, 109, 153);
+    color: white;
+    padding: 0.5%;
+}
+
+.accept{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 20%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(38, 171, 35);
+    color: white;
+    padding: 0.5%;
+}
+
+.reject {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 3%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(183, 31, 31);
+    color: white;
+    padding: 0.5%;
+}
+  
+  

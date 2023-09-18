@@ -1,0 +1,24 @@
+.createSub{
+    background-color: rgb(195, 200, 209);
+    margin: 5px;
+    padding-left: 31px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    position: relative !important;
+    color: white !important;
+}
+.linkat{
+    background-color: rgb(255, 255, 255);
+    width: 88.5%;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }
+.selectAttBtn{
+    background-color: rgb(18, 29, 43) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+.selectAttBtn:hover{
+    background-color: rgb(34, 96, 177) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}

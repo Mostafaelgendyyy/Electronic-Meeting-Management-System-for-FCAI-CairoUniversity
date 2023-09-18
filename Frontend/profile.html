@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--My Custom CSS Files-->
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+    <title>الحساب الشخصى</title>
+    <script>
+      window.onload = function () {
+        userdata();
+      };
+    </script>
+</head>
+<body>
+
+  <!--First Section Header Start-->
+  <section class="firstheader">
+      <div class="container d-flex justify-content-between">
+             <div>
+              <a href=""><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60" alt=""></a>
+              <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+             </div> 
+                <ul class="icons fade-in">
+                <!-- <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a> -->
+                <a class="icon" onclick="gohome()"><i class="fa-solid fa-house"></i></a>
+                <a  id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+            </ul>
+      </div>
+      <br>
+  </section>
+  <!--First Section Header End-->
+    <!--Navbar Start-->
+    <div class="NavBar">
+      <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+              <div class="navbar-nav mx-auto" >
+                <a class="nav-link" ></a>
+              </div>
+             </div>
+      </div>
+        </nav>
+  </div>
+  <!--Navbar End-->
+  <br>
+
+    <!--Profile HTML Start-->
+    <div class="card-group" id="user">
+      <div class="card" style="padding-top: 75px; border: 0px;">
+        <center>
+        <img src="logos/2default-avatar-profile-icon-vector-social-media-user-image-700-205124837-removebg-preview.png" style="width: 200px !important;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="username">اسم المستخدم</h5>
+        </div>
+        </center>
+      </div>
+
+      <div class="card middlecard" style="border: 0px;">
+        <div class="card-body">
+          <h3 class="card-title">إعدادات</h3>
+          <br>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">القسم</label>
+              <input type="text" class="form-control disable" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">البريد الالكترونى</label>
+              <input type="email" class="form-control disable" id="exampleInputEmail1" placeholder=" ">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">المسمى الوظيفي</label>
+              <input type="text" class="form-control disable" id="exampleInputPassword4" placeholder=" ">
+            </div>
+            <div>
+              <a href="resetpassword.html" class="btn selectDoneBtn" id="resetpassword1">تغير كلمه المرور</a>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+      <div class="card" style="border: 0px;"></div>
+    </div>
+    <!--Profile HTML End-->
+
+    <!--Footer Copyright Start-->
+    <div class="lastsection">
+        <center>
+            <div class="textlastsection">
+              <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+            </div>
+        </center>
+    </div>
+    <!--Footer Copyright End-->
+
+    <!--JS Files-->
+    <script src="js/logout.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/resetpassword.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/flipcard.js"></script>
+    <script src="js/authenticatedProfile.js"></script>
+</body>
+</html>

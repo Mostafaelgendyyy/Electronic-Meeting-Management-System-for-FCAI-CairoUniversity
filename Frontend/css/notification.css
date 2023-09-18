@@ -1,0 +1,252 @@
+.left {
+    box-sizing: border-box !important;
+    padding-right: 4% !important;
+    height: 80vh;
+}
+
+.right {
+    box-sizing: border-box !important;
+    padding-left: 5% !important;
+    height: 80vh;
+}
+
+.left1 {
+    background-color: rgb(68, 128, 197);
+    width: 90%;
+    height: 50%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36%;
+    margin-top: 3%;
+}
+
+.left2 {
+    background-color: rgb(36, 58, 84);
+    width: 90%;
+    height: 20%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meetingDetails {
+    height: 80vh;
+}
+
+.left1Layer1 {
+    position: relative;
+    border-radius: 17px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(240, 248, 255, 0.455);
+}
+
+.selectuser {
+    position: absolute;
+    top: 22%;
+    right: 20%;
+    background-color: white !important;
+    color: black !important;
+    border-radius: 7px !important;
+    width: 65% !important;
+    height: 22% !important;
+}
+
+.meetingtitle {
+    color: white;
+    position: absolute;
+    top: 2%;
+    right: 20%;
+    font-size: larger;
+}
+
+.h2-1 {
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    color: white;
+    font-size: 170%;
+}
+
+.h3-1 {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    color: white;
+    font-size: 20px;
+}
+
+.h3-2 {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    color: white;
+    font-size: 20px;
+}
+
+.h3-3 {
+    position: absolute;
+    right: 5%;
+    top: 60%;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+
+.h3-4 {
+    position: absolute;
+    right: 5%;
+    top: 80%;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+
+.button11 {
+    position: absolute;
+    right: 12%;
+    bottom: 3%;
+    color: rgb(36, 58, 84) !important;
+    font-size: 80% !important;
+    width: max-content !important;
+    height: fit-content !important;
+}
+
+.button12 {
+    position: absolute;
+    right: 57%;
+    bottom: 3%;
+    color: rgb(36, 58, 84) !important;
+    font-size: 80% !important;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.left2Layer2 {
+    position: relative;
+    border-radius: 17px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(240, 248, 255, 0.455);
+}
+
+.button2 {
+    position: absolute;
+    color: rgb(36, 58, 84) !important;
+    font-size: 70% !important;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.h2-2 {
+    position: absolute;
+    top: 20%;
+    color: white;
+    font-size: 135%;
+    display: inline-block;
+}
+
+.h2-3 {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    color: white;
+    font-size: 135%;
+    display: inline-block;
+}
+
+.right1 {
+    background-color: rgb(32, 71, 118);
+    width: 100%;
+    height: 98%;
+    margin: 0.7%;
+    border-radius: 17px;
+}
+
+.space1 {
+    margin-inline: 2%;
+}
+
+.space2 {
+    margin-inline: 1.1%;
+}
+
+.row2 {
+    margin-top: 17px !important;
+}
+
+.h2-4 {
+    color: white;
+    font-size: 25px;
+    display: inline-block;
+}
+
+.h2-5 {
+    color: white;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.notification {
+    height: 450px;
+    border: 0px;
+    background-color: transparent !important;
+    border-radius: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.cardu {
+    height: 40% !important;
+}
+
+.forPlaces{
+    position: relative;
+}
+
+.agenda {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    right: 3%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(72, 109, 153);
+    color: white;
+    padding: 0.5%;
+}
+
+.accept{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 20%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(38, 171, 35);
+    color: white;
+    padding: 0.5%;
+}
+
+.reject {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 3%;
+    bottom: 4%;
+    border: 0px;
+    border-radius: 7px;
+    background-color: rgb(183, 31, 31);
+    color: white;
+    padding: 0.5%;
+}

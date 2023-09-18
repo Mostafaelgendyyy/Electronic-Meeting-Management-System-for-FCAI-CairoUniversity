@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--My Custom CSS Files-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/initiatorgroups.css">
+  <!--Bootstrap 5-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/f0525f147f.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="icon" type="image/x-icon" href="logos/FCAILogo-removebg-preview.png">
+  <title>اضافة مجموعه</title>
+  <script>
+    window.onload = function () {
+      showinitiators();
+    };
+  </script>
+</head>
+
+<body>
+
+  <!--First Section Header Start-->
+  <section class="firstheader">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href=""><img src="logos/FCAILogo-removebg-preview.png" class="fade-in " height="60" width="60" alt=""></a>
+        <span class="fcai fade-in">كلية الحاسبــــات و الذكـــاء الاصطناعى</span>
+      </div>
+      <ul class="icons fade-in">
+        <!-- <a class="icon" href=""><i class="fa-solid fa-house"></i></a>
+        <a class="icon" href="profile.html"><i class="fa-regular fa-user"></i></a> -->
+        <a id="logout" onclick="logout()" class="btn logoutt">تسجيل الخروج</a>
+      </ul>
+    </div>
+    <br>
+  </section>
+  <!--First Section Header End-->
+  <!--Navbar Start-->
+  <div class="NavBar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fade-in" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link" href="admin.html">اضافة مستخدم</a>
+            <a class="nav-link" href="adddepartment.html">اضافة قسم</a>
+            <a class="nav-link" href="adminaddinvitees.html">اضافة اعضاء </a>
+            <a class="nav-link" href="adminaddlocation.html">اضافة مكان</a>
+            <a class="nav-link" href="addmeetingtype.html">اضافة نوع اجتماع</a>
+            <a class="nav-link" href="addsubject.html">اضافة نوع الموضوع</a>
+            <a class="nav-link" href="initiatorgroups.html">اضافة مجموعه</a>
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <!--Navbar End-->
+  <section class="firstheader">
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-8 right">
+          <div class="right1">
+            <div class="col-6">
+              <div class="container">
+                <br>
+                <h2 class="h2-5">اضافة مجموعه</h2>
+
+                <div>
+                  <h4 class="h4-0">اختر لمن المجموعه</h4>
+                  <form action="/action_page.php">
+                    <select  class="initiator" onclick="onselection()" id="init">
+                      <option value="">دكتور محمد نور الدين رئيس قسم نظم معلومات</option>
+                    </select>
+                  </form>
+                </div>
+                <br>
+
+                <h4 class="h4-1">اختر افراد المجموعه</h4>
+
+                <div class="formayainshallah"><br>
+                  <div class="container">
+
+                    <div id="group">
+                      <div class="row">
+                        <div class="col-md-9">
+                          <div class="card border-0 h-100">
+                            <div class="card-body">
+                              <p class="card-text" hidden style="text-align:right;">الاسم :</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="card border-0 h-100">
+                            <div class="card-body">
+                              <input class="chbox" type="checkbox" id="
+                                    " name="Doc1" value="Doc1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr> <!-- "<hr> لما تاخد السطور دى فى الجافا سكريبت جد السطر ده معاك" -->
+                    </div>
+
+                  </div>
+                </div>
+
+                <div>
+                  <button type="submit" onclick="checkedinvited()" class="btn selectdonebtn1">
+                    اضف
+                  </button>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-5">
+                  <div>
+                    <button type="button" onclick="fun()" class="btn btn-primary button12" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal3">
+                      عرض افراد المجموعه
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                      aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content forsizes">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel1">افراد المجموعه</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                              style="margin-left: 0;"></button>
+                          </div>
+                          <br>
+
+                          <!-- <input id="username" type="text" class="inputStyling" placeholder="اسم المستخدم">
+                          <button type="submit" class="btn selectdonebtn2 " >
+                            اضف مستخدم
+                          </button>
+                          <hr> -->
+                          <div class="modal-body">
+                            <div class="container">
+                              <div class="row" id="deletem">
+
+                                <div class="col-md-9">
+                                  <div class="card border-0 h-100">
+                                    <div class="card-body">
+                                      <p class="card-text" style="text-align:right;">الاسم :</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                  <div class="card border-0 h-100">
+                                    <div class="card-body">
+                                      <button type="submit" onclick="deletemember()" id="deletemm"
+                                        class="btn btn-danger ">
+                                        حذف
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <hr>
+
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="submit" onclick="deletFunction()" class="btn selectdonebtn" id="butt">
+                    حذف المجموعه
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!--Footer Copyright Start-->
+  <div class="lastsection">
+    <center>
+      <div class="textlastsection">
+        <h6> © 2023 جميع الحقوق محفوظة لدي FCAI </h6>
+      </div>
+    </center>
+  </div>
+  <!--Footer Copyright End-->
+
+  <!--JS Files-->
+  <script src="js/logout.js"></script>
+  <script src="js/creategroup.js"></script>
+  <script src="js/initiatornotification.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/flipcard.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/authenticatedAdmin.js"></script>
+
+</body>
+
+</html>

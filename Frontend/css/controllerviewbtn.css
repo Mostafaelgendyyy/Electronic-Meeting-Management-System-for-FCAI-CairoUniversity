@@ -1,0 +1,45 @@
+.big{
+    font-size:x-large;
+}
+.selectAttBtn1{
+    position: absolute;
+    top: 80%;
+    left: 9%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(18, 29, 43) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+.selectAttBtn1:hover{
+    background-color: rgb(34, 96, 177) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+.selectAttBtn{
+    position: absolute;
+    left : 15%;
+    top: 80%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(34, 96, 177) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+.selectAttBtn:hover{
+    background-color: rgb(18, 29, 43) !important;
+    color: rgba(255, 255, 255, 0.895) !important;
+}
+.linkat{
+    margin-top: 2%;
+    background-color: rgb(255, 255, 255);
+    width: 88.5%;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }
+.lastsection{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 1%;
+}
