@@ -1,0 +1,379 @@
+body{direction: rtl;}
+#navbarNavAltMarkup{z-index: 1;}
+.firstheader{
+    width: 100%;
+    padding-top: 15px;
+}
+.logoutt{
+    border-radius: 4px;
+    font-size: 90%;
+    background-color: rgb(72, 109, 153) !important;
+    color: white !important;
+    width: fit-content;
+    height: fit-content;
+}
+.logoutt:hover{
+    background-color: rgb(34, 49, 67) !important;
+    color: white !important;
+}
+.fcai{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(179, 147, 147);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.fcai:hover{
+    color: gray;
+}
+.icons{
+    display: inline-block !important;
+    float: right !important;
+    font-size: 20px !important  ;
+    padding: 0;
+
+    list-style: none;
+}
+.icons i{
+    margin: 0px 10px !important; 
+}
+.icon{
+    color: black !important;
+}
+.icon:hover{
+    color: gray !important;
+}
+i{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.NavBar{
+    background-color: rgb(0, 9, 51);
+}
+.nav-link{
+    color: white !important;
+    font-size: 20px !important;
+    margin: 0px 50px !important; 
+    transition: all 0.2s linear;
+}
+.nav-link:hover{
+    background-color: rgba(255, 255, 255, 0.637) !important;
+    color: black !important;
+}
+.openningsection{
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.507) , rgba(0, 0, 0, 0.514)),url(../img/headerbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.openningsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header1{
+    color: white;
+    font-size: 70px;
+}
+.secondsection{
+    font-family: 'Advent Pro';
+    font-size: 22px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin-bottom: -1%;
+    background-color: #eeeeeed9;
+}
+
+
+.thirdsection{
+    height: 27.5vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 9, 51, 0.89),rgba(0, 9, 51, 0.904)),url(../img/3rdbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thirdseccol{
+  height: 20vh;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white !important;
+  border: 0px solid #eeeeee7c;
+}
+.thirdseccol:hover{
+    background-color: #eeeeee77 ;
+    color: rgb(0, 9, 51) !important;
+}
+
+/* .thirdsecbody{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thirdsecbody:hover{
+    color: black !important;
+} */
+
+.thirdsectitle{
+    color: white !important;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+.thirdsectitle:hover{
+    color: black !important;
+}
+.lastsection{
+    height: 5vh;
+    background-color:rgb(0, 9, 51) !important;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textlastsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Adjust the styles of elements on your website */
+    .firstheader{
+        width: 100%;
+        padding-top: 15px;
+    }
+    
+    .fcai{
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+    .fcai:hover{
+        color: gray;
+    }
+    .icons{
+        display: inline-block !important;
+        float: right !important;
+        font-size: 15px !important  ;
+        padding: 0;
+    
+        list-style: none;
+    }
+    .icons i{
+        margin: 0px 5px !important; 
+    }
+    .icon{
+        color: black !important;
+    }
+    .icon:hover{
+        color: gray !important;
+    }
+    i{
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    .NavBar{
+        background-color: rgb(0, 9, 51);
+    }
+    .nav-link{
+        color: white !important;
+        font-size: 20px !important;
+        margin: 0px 50px !important; 
+        transition: all 0.2s linear;
+    }
+    .nav-link:hover{
+        background-color: rgba(255, 255, 255, 0.637) !important;
+        color: black !important;
+    }
+    .openningsection{
+        width: 100%;
+        height: 85vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.507) , rgba(0, 0, 0, 0.514)),url(../img/headerbg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .openningsection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header1{
+        color: white;
+        font-size: 50px;
+    }
+    .secondsection{
+        font-size: 15px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        margin-bottom: -1%;
+        background-color: #eeeeeed9;
+    }
+    .thirdsection{
+        height: 90vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 9, 51, 0.89),rgba(0, 9, 51, 0.904)),url(../img/3rdbg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .thirdseccol{
+      height: 10vh;
+      width: 100%;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white !important;
+      border: 0px solid #eeeeee7c;
+    }
+    .thirdseccol:hover{
+        background-color: #eeeeee77 ;
+        color: rgb(0, 9, 51) !important;
+    }
+    .thirdsecbody{
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .thirdsectitle{
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .footer{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(#eeeeeec9,#eeeeeec5),url(../img/footer.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    .fcaifooter{
+        font-size: 5px;
+    }
+    .cardfourthsection{
+        margin: 0px 90px;
+        width: 50%;
+        height: 200px;
+        text-align: center; 
+    background-color: transparent !important;}
+    .cardbodyfourth{
+        font-size: larger;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 25px;
+    }
+    .footerListItem{
+        list-style-type: none;
+        text-decoration: none !important;
+        color: black !important;
+        transition: all 0.4s linear;
+    }
+    .footerListItem:hover{
+        color: rgb(0, 9, 51) !important;
+        text-decoration: underline !important;
+    }
+    .lastsection{
+        height: 5vh;
+        background-color:rgb(0, 9, 51) !important;
+        color: white !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .textlastsection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+  }
+
+/* For tablet screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Add your CSS styles here */
+    /* For example: */
+    .firstheader{
+        width: 100%;
+        padding-top: 15px;
+    }
+    
+    .fcai{
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+    .fcai:hover{
+        color: gray;
+    }
+    .icons{
+        display: inline-block !important;
+        float: right !important;
+        font-size: 15px !important  ;
+        padding: 0;
+    
+        list-style: none;
+    }
+
+  }
+  
+  /* For iPad screens */
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Add your CSS styles here */
+    /* For example: */
+    .firstheader{
+        width: 100%;
+        padding-top: 15px;
+    }
+    
+    .fcai{
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+    .fcai:hover{
+        color: gray;
+    }
+    .icons{
+        display: inline-block !important;
+        float: right !important;
+        font-size: 15px !important  ;
+        padding: 0;
+    
+        list-style: none;
+    }
+
+  }
+  
+  
